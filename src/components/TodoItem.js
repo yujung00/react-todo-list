@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import './TodoItem.css';
 
 class TodoItem extends Component{
     render() {
@@ -11,6 +12,12 @@ class TodoItem extends Component{
                     e.stopPropagation();
                     onRemove(id)
                 }}>&times;</div>
+                <div className={`todo-text ${checked && 'checked'}`}>
+                    <div>{text}</div>
+                </div>
+                {
+                    checked && (<div className="check-mark">☑</div>)
+                }
             </div>
         );
     };

@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import TodoListTemplate from "./components/TodoListTemplate";
 import Form from "./components/Form";
+import TodoItemList from "./components/TodoItemList";
 
 class App extends Component {
     constructor(props) {
@@ -11,7 +12,7 @@ class App extends Component {
         return (
             <div>
                 <TodoListTemplate form={<Form/>}>
-                    집가서 잠자기
+                    <TodoItemList/>
                 </TodoListTemplate>
             </div>
         );
